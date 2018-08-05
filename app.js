@@ -23,7 +23,7 @@ app.get('/', (req, res, next) => {
 })
 
 const init = async () => {
-  await models.db.sync({force: true});
+  await models.db.sync();
 
   const  PORT = 1337;
   app.listen(PORT, () => {
